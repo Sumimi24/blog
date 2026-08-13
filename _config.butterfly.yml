@@ -1,4 +1,4 @@
-# Minimal white Butterfly overrides
+# Butterfly configuration — functional, but intentionally minimal and white.
 nav:
   logo:
   display_title: true
@@ -8,10 +8,13 @@ nav:
 menu:
   首页: / || fas fa-home
   归档: /archives/ || fas fa-box-archive
+  分类: /categories/ || fas fa-folder
+  标签: /tags/ || fas fa-tags
+  友链: /links/ || fas fa-link
   关于: /about/ || fas fa-user
 
 social:
-  # fab fa-github: https://github.com/your-name || GitHub || '#181717'
+  fab fa-github: https://github.com/Sumimi24 || GitHub || '#181717'
 
 favicon: /favicon.ico
 avatar:
@@ -33,6 +36,11 @@ cover:
   archives_enable: false
   default_cover:
 
+error_404:
+  enable: true
+  subtitle: 页面不存在，或已被移动。
+  background: '#ffffff'
+
 subtitle:
   enable: false
 
@@ -46,7 +54,7 @@ post_meta:
     date_type: created
     date_format: date
     categories: true
-    tags: false
+    tags: true
     label: true
   post:
     position: left
@@ -55,6 +63,33 @@ post_meta:
     categories: true
     tags: true
     label: true
+
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: true
+  scroll_percent: true
+
+post_copyright:
+  enable: true
+  decode: false
+  author_href: https://github.com/Sumimi24
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+post_edit:
+  enable: true
+  url: https://github.com/Sumimi24/blog/edit/main/source/
+
+related_post:
+  enable: true
+  limit: 4
+  date_type: created
+
+post_pagination: 1
+readmode: true
 
 aside:
   enable: true
@@ -70,31 +105,92 @@ aside:
     enable: true
     description: 保持好奇，持续记录。
     button:
-      enable: false
+      enable: true
+      icon: fab fa-github
+      text: GitHub
+      link: https://github.com/Sumimi24
   card_announcement:
-    enable: false
+    enable: true
+    content: 欢迎来到我的个人博客。
   card_recent_post:
     enable: true
     limit: 5
     sort: date
   card_categories:
-    enable: false
+    enable: true
+    limit: 8
+    expand: none
   card_tags:
-    enable: false
+    enable: true
+    limit: 30
+    color: false
+    orderby: name
+    order: 1
   card_archives:
-    enable: false
+    enable: true
+    type: monthly
+    format: YYYY-MM
+    order: -1
+    limit: 8
   card_webinfo:
-    enable: false
+    enable: true
+    post_count: true
+    last_push_date: true
 
 darkmode:
   enable: false
+
+rightside_scroll_percent: true
+rightside_config_animation: false
+
+copy:
+  enable: true
+  copyright:
+    enable: true
+    limit_count: 150
+
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+search:
+  use: local_search
+  placeholder: 搜索文章
+  local_search:
+    preload: true
+    top_n_per_article: 1
+    unescape: false
+    pagination:
+      enable: true
+      hitsPerPage: 8
+
+share:
+  use: sharejs
+  sharejs:
+    sites: wechat,weibo,qq
+
+comments:
+  use:
+  text: true
+  lazyload: true
+  count: false
+  card_post_count: false
 
 footer:
   owner:
     enable: true
     since: 2026
+  copyright:
+    enable: true
+    version: false
   custom_text: 用 Hexo 与 Butterfly 构建
-  copyright: true
 
 inject:
   head:

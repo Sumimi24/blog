@@ -1,0 +1,15 @@
+- class_name: 常用链接
+  class_desc: 值得收藏的项目与站点
+  link_list:
+    - name: GitHub
+      link: https://github.com/Sumimi24
+      avatar: https://github.githubassets.com/favicons/favicon.svg
+      descr: 我的 GitHub 主页
+    - name: Hexo
+      link: https://hexo.io/zh-cn/
+      avatar: https://hexo.io/icon/favicon-196x196.png
+      descr: 快速、简洁且高效的博客框架
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://butterfly.js.org/img/favicon.png
+      descr: 当前博客使用的 Hexo 主题

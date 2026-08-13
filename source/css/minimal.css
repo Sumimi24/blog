@@ -70,6 +70,63 @@ a {
   text-shadow: none;
 }
 
+/* Functional components keep the same restrained visual language. */
+#local-search .search-dialog,
+.flink .flink-list-item,
+.post-copyright,
+.relatedPosts-list > div {
+  background: #fff !important;
+  border: 1px solid #ededed !important;
+  box-shadow: none !important;
+}
+
+#local-search .search-dialog {
+  border-radius: 14px;
+}
+
+.local-search-box--input {
+  border: 1px solid #ddd !important;
+  border-radius: 8px !important;
+  color: #222 !important;
+}
+
+.search-keyword {
+  background: #eee !important;
+  color: #111 !important;
+}
+
+.flink .flink-list-item {
+  border-radius: 10px !important;
+}
+
+.flink .flink-list-item:hover {
+  transform: translateY(-2px) !important;
+  border-color: #d5d5d5 !important;
+}
+
+.post-copyright {
+  border-radius: 10px;
+}
+
+#rightside > div > button,
+#rightside > div > a {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+#pagination .page-number.current,
+#pagination .page-number:hover,
+#pagination .extend:hover {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+.card-tag-cloud a,
+.card-category-list-link,
+.card-archive-list-link {
+  color: #555 !important;
+}
+
 ::selection {
   background: #222;
   color: #fff;
@@ -83,4 +140,3 @@ a {
     border-radius: 8px;
   }
 }
-
