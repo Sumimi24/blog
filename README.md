@@ -2,6 +2,8 @@
 
 纯白极简风格的 Hexo 博客，使用 Butterfly 主题，发布到 GitHub Pages，并使用 `blog.sumimi.site` 作为自定义域名。
 
+完整的写作、Obsidian 导入、预览和发布方法见 [`BLOG_USAGE.md`](BLOG_USAGE.md)。
+
 ## 本地预览
 
 ```bash

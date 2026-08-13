@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "build": "hexo generate",
     "dev": "hexo server",
-    "deploy": "hexo clean && hexo generate && hexo deploy"
+    "deploy": "hexo clean && hexo generate && hexo deploy",
+    "obsidian:import": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/import-obsidian.ps1"
   },
   "engines": {
     "node": ">=20"
