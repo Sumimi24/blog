@@ -1,0 +1,86 @@
+:root {
+  --global-bg: #fff;
+  --card-bg: #fff;
+  --font-color: #242424;
+  --text-highlight-color: #111;
+  --btn-bg: #111;
+  --btn-color: #fff;
+  --border-color: #ececec;
+}
+
+body {
+  background: #fff !important;
+  color: #242424;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  letter-spacing: .01em;
+}
+
+#page-header,
+#footer {
+  background: #fff !important;
+}
+
+#page-header:not(.not-top-img) #nav {
+  background: rgba(255, 255, 255, .92);
+}
+
+#nav,
+#nav a,
+#nav #site-name,
+#nav .site-page {
+  color: #202020 !important;
+  text-shadow: none !important;
+}
+
+#nav {
+  border-bottom: 1px solid #eee;
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
+#recent-posts > .recent-post-item,
+.card-widget,
+.layout > div:first-child:not(.recent-posts),
+#post {
+  border: 1px solid #ededed;
+  border-radius: 12px;
+  box-shadow: none !important;
+}
+
+#recent-posts > .recent-post-item:hover,
+.card-widget:hover {
+  border-color: #d8d8d8;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .04) !important;
+}
+
+a {
+  transition: color .2s ease, opacity .2s ease;
+}
+
+#article-container a,
+.post-meta__tags,
+.article-meta__categories {
+  color: #555 !important;
+  text-decoration-color: #bbb;
+}
+
+#footer,
+#footer a {
+  color: #777 !important;
+  text-shadow: none;
+}
+
+::selection {
+  background: #222;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #recent-posts > .recent-post-item,
+  .card-widget,
+  .layout > div:first-child:not(.recent-posts),
+  #post {
+    border-radius: 8px;
+  }
+}
+

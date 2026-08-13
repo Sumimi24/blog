@@ -1,0 +1,62 @@
+# Hexo site configuration
+# Replace these four values before publishing.
+title: 我的博客
+subtitle: 记录思考与生活
+description: 一个极简、纯白的个人博客
+keywords: 博客, 技术, 生活
+author: 博主
+language: zh-CN
+timezone: Asia/Shanghai
+
+# Public blog address. The apex domain (sumimi.site) stays available for other uses.
+url: https://blog.sumimi.site
+root: /
+permalink: posts/:year/:month/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+per_page: 10
+pagination_dir: page
+
+theme: butterfly
+
+deploy:
+  type: git
+  # Fill this only if you prefer `npm run deploy` over GitHub Actions.
+  repo:
+  branch: gh-pages

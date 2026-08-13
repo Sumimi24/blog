@@ -1,0 +1,31 @@
+{
+  "name": "minimal-hexo-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal white Hexo blog powered by Butterfly",
+  "scripts": {
+    "clean": "hexo clean",
+    "build": "hexo generate",
+    "dev": "hexo server",
+    "deploy": "hexo clean && hexo generate && hexo deploy"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "dependencies": {
+    "hexo": "^8.1.2",
+    "hexo-deployer-git": "^4.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-renderer-pug": "^3.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-butterfly": "^5.7.0"
+  }
+}

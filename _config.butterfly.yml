@@ -1,0 +1,103 @@
+# Minimal white Butterfly overrides
+nav:
+  logo:
+  display_title: true
+  display_post_title: true
+  fixed: true
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-box-archive
+  关于: /about/ || fas fa-user
+
+social:
+  # fab fa-github: https://github.com/your-name || GitHub || '#181717'
+
+favicon: /favicon.ico
+avatar:
+  img: /img/avatar.png
+  effect: false
+
+disable_top_img: true
+default_top_img: false
+index_img: false
+archive_img: false
+tag_img: false
+category_img: false
+footer_img: false
+background: '#ffffff'
+
+cover:
+  index_enable: false
+  aside_enable: false
+  archives_enable: false
+  default_cover:
+
+subtitle:
+  enable: false
+
+index_layout: 4
+index_post_content:
+  method: 2
+  length: 180
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: false
+    label: true
+  post:
+    position: left
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: false
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: 保持好奇，持续记录。
+    button:
+      enable: false
+  card_announcement:
+    enable: false
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+  card_categories:
+    enable: false
+  card_tags:
+    enable: false
+  card_archives:
+    enable: false
+  card_webinfo:
+    enable: false
+
+darkmode:
+  enable: false
+
+footer:
+  owner:
+    enable: true
+    since: 2026
+  custom_text: 用 Hexo 与 Butterfly 构建
+  copyright: true
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/minimal.css">
+  bottom:
+
