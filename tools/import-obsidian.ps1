@@ -2,12 +2,16 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$VaultPath,
 
-    [string]$BlogFolder = "Blog",
+    [string]$BlogFolder = "",
 
     [switch]$PublishAll
 )
 
 $ErrorActionPreference = "Stop"
+
+if ([string]::IsNullOrWhiteSpace($BlogFolder)) {
+    $BlogFolder = ([char]0x4E0A) + ([char]0x4F20) + "MD" + ([char]0x6587) + ([char]0x672C) + ([char]0x5E93)
+}
 
 $workspaceRoot = Split-Path -Parent $PSScriptRoot
 $vaultRoot = (Resolve-Path -LiteralPath $VaultPath).Path

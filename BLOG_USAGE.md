@@ -7,18 +7,17 @@
 
 ## 1. 推荐的 Obsidian 目录
 
-在 Obsidian 仓库中建立：
+当前使用的 Obsidian 博客仓库位于：
 
 ```text
-你的知识库/
-├─ Blog/                 准备发布的笔记
-│  ├─ 技术/
-│  └─ 随笔/
-├─ Attachments/          图片附件，可以使用其他名称
-└─ 其他私人笔记/         不会导入
+C:\Users\10929\Desktop\Obsidian传送门\Blog写作库\
+├─ 模板/
+│  └─ 博客文章模板.md
+├─ 附件/
+└─ 上传MD文本库/
 ```
 
-只有 `Blog` 目录中带有 `publish: true` 的笔记会被导入。私人笔记和未完成的草稿不会发布。
+只有 `上传MD文本库` 中带有 `publish: true` 的笔记会被导入。“黑曜石小屋”私人仓库不会被读取或发布。
 
 ## 2. Obsidian 文章模板
 
@@ -98,19 +97,19 @@ cd "C:\Users\10929\Documents\ChatGPT\服务器"
 运行：
 
 ```powershell
-npm.cmd run obsidian:import -- -VaultPath "D:\Obsidian\MyVault"
+npm.cmd run obsidian:import -- -VaultPath "C:\Users\10929\Desktop\Obsidian传送门\Blog写作库"
 ```
 
-如果发布目录不是 `Blog`，指定目录名：
+导入器默认读取 `上传MD文本库`。如果以后修改了目录名称，可以显式指定：
 
 ```powershell
-npm.cmd run obsidian:import -- -VaultPath "D:\Obsidian\MyVault" -BlogFolder "公开文章"
+npm.cmd run obsidian:import -- -VaultPath "C:\Users\10929\Desktop\Obsidian传送门\Blog写作库" -BlogFolder "新的目录名"
 ```
 
 临时导入该目录中的所有 Markdown，不检查 `publish: true`：
 
 ```powershell
-npm.cmd run obsidian:import -- -VaultPath "D:\Obsidian\MyVault" -PublishAll
+npm.cmd run obsidian:import -- -VaultPath "C:\Users\10929\Desktop\Obsidian传送门\Blog写作库" -PublishAll
 ```
 
 导入后的文章位于：
@@ -210,7 +209,7 @@ npx.cmd hexo new post "文章标题"
 
 检查笔记是否：
 
-1. 位于指定的 `Blog` 目录中；
+1. 位于 `上传MD文本库` 中；
 2. 文件扩展名是 `.md`；
 3. Front Matter 中包含 `publish: true`。
 
