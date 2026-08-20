@@ -222,6 +222,17 @@ Get-ChildItem -LiteralPath $blogRoot -Filter '*.md' -File -Recurse | ForEach-Obj
         return "![$($match.Groups['alt'].Value)]($assetUrl)"
     })
 
+    # Keep Obsidian's Mermaid fences in the vault, but use Butterfly's native
+    # tag syntax in generated Hexo posts so diagrams render reliably.
+    $content = [regex]::Replace(
+        $content,
+        '```mermaid\s*\r?\n([\s\S]*?)\r?\n```',
+        {
+            param($match)
+            return "{% mermaid %}`n$($match.Groups[1].Value.Trim())`n{% endmermaid %}"
+        }
+    )
+
     $destinationFile = Join-Path $destinationDirectory $note.Name
     [System.IO.File]::WriteAllText($destinationFile, $content, $utf8WithoutBom)
     Write-Host "Imported: $relativePath"

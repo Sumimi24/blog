@@ -164,6 +164,15 @@ math:
     enableMenu: true
     tags: none
 
+mermaid:
+  enable: true
+  code_write: true
+  theme:
+    light: default
+    dark: dark
+  open_in_new_tab: true
+  zoom_pan: true
+
 busuanzi:
   site_uv: true
   site_pv: true
